@@ -1,0 +1,22 @@
+{
+    "name": "mockingjay/mockingjay",
+    "description": "Unofficial PHP client for the EchoNest API",
+    "keywords": ["echonest", "php", "api", "music"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathon Hill",
+            "email": "jhill9693@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.2",
+        "guzzle/guzzle": "3.*"
+    },
+    "autoload": {
+    	"psr-0": {
+    		"mockingjay\\": "src/"
+    	}
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Echonest",
+    "apiVersion": "4",
+    "baseUrl": "http://developer.echonest.com/api/v4/",
+    "description": "Echonest developer API PHP client",
+    "operations": {
+        "trackUpload": {
+            "httpMethod": "POST",
+            "uri": "track/upload",
+            "summary": "Upload a track to The Echo Nest's analyzer for analysis.",
+            "parameters": {
+                "url": {
+                    "description": "A url to an audio file",
+                    "type": "string",
+                    "location": "postField"
+                },
+                "filetype": {
+                    "description": "The type of audio file to be analyzed",
+                    "type": "string",
+                    "location": "postField"
+                },
+                "track": {
+                    "description": "The track data",
+                    "type": "string",
+                    "location": "postField"
+                }
+            }
+        }
+    }
+}
