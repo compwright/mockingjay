@@ -25,6 +25,59 @@
                     "location": "postField"
                 }
             }
+        },
+        "songSearch": {
+            "httpMethod": "GET",
+            "uri": "song/search",
+            "summary": "Search for songs given different query types.",
+            "parameters": {
+                "artist": {
+                    "description": "The name of the primary artist.",
+                    "type": "string",
+                    "location": "query"
+                },
+                "title": {
+                    "description": "The title of the song.",
+                    "type": "string",
+                    "location": "query"
+                },
+                "results": {
+                    "description": "The desired number of songs in the playlist.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "location": "query"
+                }
+            }
+        },
+        "playlistStatic": {
+            "httpMethod": "GET",
+            "uri": "playlist/static",
+            "summary": "Returns a static playlist.",
+            "parameters": {
+                "song_id": {
+                    "description": "ID(s) of seed song(s) for the playlist (used by some types). Echo Nest or Rosetta IDs.",
+                    "type": "string",
+                    "location": "query"
+                },
+                "track_id": {
+                    "description": "ID(s) of seed tracks(s) for the playlist (used by playlist types that accept songs as seeds). Echo Nest or Rosetta IDs.",
+                    "type": "string",
+                    "location": "query"
+                },
+                "type": {
+                    "description": "The type of the playlist to be generated.",
+                    "type": "string",
+                    "location": "query"
+                },
+                "results": {
+                    "description": "The desired number of songs in the playlist.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "location": "query"
+                }
+            }
         }
     }
 }
